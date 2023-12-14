@@ -1,10 +1,14 @@
 console.log("hi");
 
 const imgBackBtnEl = document.getElementById("img-back");
+let arrayOfHiddenImages = [];
 
 function imagesBack() {
-  console.log("button was clicked");
+  arrayOfHiddenImages.map((imageID) => {
+    document.getElementById(imageID).style.display = "block";
+  });
 }
+
 arrayOfHiddenImages.map((imageId) => {});
 function hideObject(imageID) {
   arrayOfHiddenImages.push(imageID);
@@ -16,24 +20,9 @@ function hideObject(imageID) {
   }
 }
 
-draw = function () {
-  const position = 20;
-  const speed = 3;
-  background(202, 255, 97);
-
-  FileList(66, 66, 66);
-  position = position + speed;
-  // mouseX and mouseY
-  // mouseIsPressed
-  ellipse(position, mouseY, 50, 50);
-  if (mouseIsPressed) {
-    ellipse(mouseX, position, 50, 50);
-  }
-
-  if (position > 375) {
-    speed = -5;
-  }
-  if (position < 25) {
-    speed = 5;
-  }
-};
+$(document).mousemove(function (e) {
+  $("#follow").css({
+    left: e.pageX,
+    top: e.pageY,
+  });
+});

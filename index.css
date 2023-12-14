@@ -7,6 +7,15 @@
 }
 
 
+#follow {
+    text-align: center;
+        transition-duration: 0.9s;
+        transition-timing-function: ease-out;
+        position: fixed;
+        transform: translate(-50%, -50%);
+      
+  }
+
 
 h3 {
 font-size: 25px;
@@ -24,4 +33,25 @@ li {
 color:burlywood;
 font-style: italic;
 font-weight: 700;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: deepskyblue;
+}
+
+img {
+    max-height: 20vh;
+    max-width: 20vw;
+    min-height: 5vh;
+    min-width: 5vw;
+}
+
+.center{
+    justify-content: center;
+}
+
+button {
+    display: none;
 }

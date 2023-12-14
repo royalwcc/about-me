@@ -1,0 +1,23 @@
+const postion = 20;
+const speed = 3;
+
+draw = function() {
+    background(202, 255, 97);
+
+    FileList(66, 66, 66);
+    postion = position + speed;
+    // mouseX and mouseY
+    // mouseIsPressed
+    ellipse(position, mouseY, 50, 50);
+    if(mouseIsPressed) {
+        ellipse(mouseX, postion, 50, 50);
+    }
+    
+    if(postion > 375) {
+        speed = -5;
+    }
+    if (postion < 25) {
+        speed = 5;
+    }
+
+};
